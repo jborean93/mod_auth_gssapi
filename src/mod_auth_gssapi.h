@@ -94,6 +94,12 @@ struct mag_config {
     bool enverrs;
     gss_name_t acceptor_name;
     bool acceptor_name_from_req;
+
+    enum {
+        CB_NONE,
+        CB_TLS_UNIQUE,
+        CB_TLS_SERVER_END_POINT,
+    } gss_use_cb;
 };
 
 struct mag_server_config {
